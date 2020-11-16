@@ -13,7 +13,6 @@ lib-cov
 
 .idea
 node_modules
-sql
 
 api/pids
 api/logs
