@@ -19,6 +19,7 @@ Project sử dụng NodeJs cho Back-end, Angular v11 cho FE, Database sử dụn
   + https://github.com/ZafiroJS/zafiro/tree/master/src
 * Xây dựng khung back-end bằng TypeScript: https://github.com/microsoft/TypeScript-Node-Starter
 * Setup tailwindCss bằng CLI: https://github.com/ngneat/tailwind
+* ...
 
 ## Xin cảm ơn:
 Project được xây dựng từ việc tham khảo code cũng như tự phát triển của bản thân mình, 
