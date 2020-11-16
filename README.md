@@ -23,9 +23,9 @@ Project sử dụng NodeJs cho Back-end, Angular v11 cho FE, Database sử dụn
 
 ## Xin cảm ơn:
 Project được xây dựng từ việc tham khảo code cũng như tự phát triển của bản thân mình, 
-xin cảm ơn Trịnh Khang, Anh Chau Tran, Anh Trung Vo, Anh Nam cũng như các tác giả khác để giúp mh xây dựng project này
+xin cảm ơn Trịnh Khang, Anh Chau Tran, Anh Trung Vo, Anh Nam... cũng như các tác giả khác để giúp mh xây dựng project này
 
 Mình sẽ tiếp tục phát triển project này thêm nữa, mọi người có ý kiến thắc mắc, giải đáp về project có thể liên hệ mình qua
-(SKYPE): Phamtiennam2301@gmail.com
-(Mail): Phamtiennam2301@gmail.com
-(FB): fb.com/phamtiennam23
+* (SKYPE): Phamtiennam2301@gmail.com
+* (Mail): Phamtiennam2301@gmail.com
+* (FB): fb.com/phamtiennam23
