@@ -1,0 +1,55 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar"
+            nzCollapsible
+            nzWidth="256px"
+            nzBreakpoint="md"
+            [(nzCollapsed)]="isCollapsed"
+            [nzTrigger]="null">
+    <div class="sidebar-logo">
+      <a href="https://ng.ant.design/" target="_blank">
+        <img src="https://ng.ant.design/assets/img/logo.svg" alt="logo">
+        <h1>Authentication Based</h1>
+      </a>
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+        <ul>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="'/welcome'">Welcome</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a [routerLink]="'/user'">User</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header>
+      <div class="app-header flex flex-row justify-between items-center">
+        <span class="header-trigger flex" (click)="isCollapsed = !isCollapsed">
+            <i class="trigger"
+               nz-icon
+               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            ></i>
+        </span>
+        <nz-button-group class="mr-6" nz-dropdown [nzDropdownMenu]="dropdown" nzPlacement="bottomRight">
+          <button nz-button>{{email}}</button>
+          <button nz-button>
+            <i nz-icon nzType="user"></i>
+          </button>
+        </nz-button-group>
+        <nz-dropdown-menu #dropdown="nzDropdownMenu">
+          <ul nz-menu>
+            <li nz-menu-item (click)="onLogout()">Log out</li>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
+    </nz-header>
+    <nz-content>
+      <div class="inner-content">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+  </nz-layout>
+</nz-layout>

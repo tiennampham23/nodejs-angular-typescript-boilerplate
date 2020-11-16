@@ -1,0 +1,34 @@
+<div class="w-full h-full flex justify-center items-center login-container">
+  <div class="login-form">
+    <div class="w-full max-w-xs m-20">
+      <form nz-form [formGroup]="loginForm" class="max-w-300" (ngSubmit)="onLogin()">
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your email!">
+            <nz-input-group nzPrefixIcon="user">
+              <input type="text" nz-input formControlName="email" placeholder="Email" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Please input your Password!">
+            <nz-input-group nzPrefixIcon="lock">
+              <input type="password" nz-input formControlName="password" placeholder="Password" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <div nz-row class="mb-4">
+          <div nz-col [nzSpan]="12">
+            <label nz-checkbox formControlName="remember">
+              <span>Remember me</span>
+            </label>
+          </div>
+          <div nz-col [nzSpan]="12" class="flex justify-end">
+            <a>Forgot password</a>
+          </div>
+        </div>
+        <button nz-button class="w-full mb-4" [nzType]="'primary'">Log in</button>
+        Or <a> register now! </a>
+      </form>
+    </div>
+  </div>
+</div>

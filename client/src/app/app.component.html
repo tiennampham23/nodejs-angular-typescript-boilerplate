@@ -1,0 +1,6 @@
+<div class="app-layout">
+  <app-spinner-loader [hidden]="!loading"></app-spinner-loader>
+  <div [hidden]="loading" class="router-output">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<form [formGroup]="userBusinessFormGroup" class="grid grid-cols-3" nz-form>
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="email" nzRequired>E-mail</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="The input is not valid E-mail!">
+      <input formControlName="email" id="email" nz-input/>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="name" nzRequired>Name</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input your name!">
+      <input formControlName="name" nz-input type="name"/>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSm]="6" [nzXs]="24" nzFor="password" nzRequired>Password</nz-form-label>
+    <nz-form-control [nzSm]="14" [nzXs]="24" nzErrorTip="Please input your password!">
+      <input formControlName="password" nz-input type="password"/>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item nz-row class="register-area">
+    <nz-form-control [nzSpan]="14" [nzOffset]="6">
+      <button nz-button nzType="primary" (click)="submitForm()">
+        <p *ngIf="action === 'CREATE'">Create New User</p>
+        <p *ngIf="action === 'UPDATE'">Update User</p>
+      </button>
+      <button nz-button nzType="dashed" class="ml-2" (click)="cancelForm()">Cancel</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>
