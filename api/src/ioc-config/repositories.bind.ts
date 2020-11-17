@@ -7,7 +7,7 @@ export default async function bindRepositories(
     container: interfaces.Container
 ) {
    const entityTypes = [
-        'Repository<UserEntity>'
+        "Repository<UserEntity>"
    ];
    const repositories = await getRepositories<any>([UserEntity]);
    repositories.forEach((repository, i) => {

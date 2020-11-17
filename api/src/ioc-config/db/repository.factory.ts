@@ -6,5 +6,5 @@ export async function getRepositories<T>(
     const connection = getConnection();
     return entities.map(entity => {
         return connection.getRepository<T>(entity);
-    })
+    });
 }

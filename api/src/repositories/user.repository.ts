@@ -8,7 +8,7 @@ import { IUserRepository } from "./i.user.repository";
 export class UserRepository extends BaseRepository<UserEntity> implements IUserRepository{
     private userRepository: Repository<UserEntity>;
     constructor(
-       @inject('Repository<UserEntity>') repository: Repository<UserEntity>
+       @inject("Repository<UserEntity>") repository: Repository<UserEntity>
     ) {
        super(repository);
        this.userRepository = repository;

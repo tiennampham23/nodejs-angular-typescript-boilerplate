@@ -9,14 +9,11 @@ import { generateHash } from "../utils";
 import ApiResponse from "../utils/apiResponse";
 
 
-@controller('/user')
+@controller("/user")
 export class UserController {
     @inject(REPOSITORY_TYPES.IUserRepository) private readonly userRepository: IUserRepository;
 
-    constructor( ) {
-    }
-
-    @httpGet('/getAll')
+    @httpGet("/getAll")
     private async getAll(@request() req: RequestCustom, @response() res: Response) {
         try {
             const users = await this.userRepository.getAll({});
@@ -28,9 +25,8 @@ export class UserController {
     }
 
 
-    @httpGet('/getOne/:id', REPOSITORY_TYPES.AuthenticatedMiddleware, REPOSITORY_TYPES.RequiredMiddleware)
+    @httpGet("/getOne/:id", REPOSITORY_TYPES.AuthenticatedMiddleware, REPOSITORY_TYPES.RequiredMiddleware)
     private async getOne(@request() req: RequestCustom, @response() res: Response) {
-        let user = null;
         try {
             const {params} = req;
             const {id} = params;
@@ -45,7 +41,7 @@ export class UserController {
         }
     }
 
-    @httpPost('/create')
+    @httpPost("/create")
     private async createUser(@request() request: RequestCustom, @response() response: Response) {
         try {
             const user = request.body;
@@ -62,7 +58,7 @@ export class UserController {
             return ApiResponse.error(response, null, HTTP_CODE.ERROR, MESSAGE.USER.CANNOT_CREATE_USER);
         }
     }
-    @httpPut('/update/:id')
+    @httpPut("/update/:id")
     async updateUser(@request() request: RequestCustom, @response() response: Response) {
         try {
             const user = request.body;
@@ -74,7 +70,7 @@ export class UserController {
             return ApiResponse.error(response, null, HTTP_CODE.ERROR, MESSAGE.USER.CANNOT_CREATE_USER);
         }
     }
-    @httpDelete('/delete/:id')
+    @httpDelete("/delete/:id")
     async deleteUser(@request() request: RequestCustom, @response() response: Response) {
         try {
             const {id} = request.params;
@@ -84,6 +80,4 @@ export class UserController {
             return ApiResponse.error(response, null, HTTP_CODE.ERROR, MESSAGE.USER.CANNOT_CREATE_USER);
         }
     }
-};
-
-export default new UserController();
+}

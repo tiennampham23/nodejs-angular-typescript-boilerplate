@@ -13,9 +13,6 @@ import ApiResponse from "../utils/apiResponse";
 export class AuthController implements interfaces.Controller  {
     @inject(REPOSITORY_TYPES.IUserRepository) private readonly userRepository: IUserRepository;
 
-    constructor( ) {
-    }
-
     @httpPost("/login")
     private async login(@request() req: RequestCustom, @response() res: Response) {
         let user = null;
@@ -40,7 +37,6 @@ export class AuthController implements interfaces.Controller  {
     }
     @httpPost("/register")
     private async register(@request() req: Request, @response() res: Response) {
-        let user = null;
         try {
             const {email, password, name} = req.body;
             const passwordHash = await generateHash(password, 10);
@@ -50,7 +46,7 @@ export class AuthController implements interfaces.Controller  {
                 name, 
                 isActive: true
             });
-            return ApiResponse.success(res, user, HTTP_CODE.SUCCESS, MESSAGE.SUCCESS);
+            return ApiResponse.success(res, true, HTTP_CODE.SUCCESS, MESSAGE.SUCCESS);
         } catch (ex) {
             return ApiResponse.error(res, null,  HTTP_CODE.ERROR, ex.toString());
         }
