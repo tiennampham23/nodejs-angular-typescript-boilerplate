@@ -9,6 +9,13 @@ Project sử dụng NodeJs cho Back-end, Angular v11 cho FE, Database sử dụn
 * InversifyJs
 * ...
 
+## Cài đặt:
+- Cài đặt MYSQL
+- Tạo cơ sở dữ liệu và bảng users trong **sql**
+- Mở **api** > **ormconfig.js** sửa cấu hình Mysql
+- Chạy Api: **cd /api && npm i && npm start **
+- Chạy client: **cd /client && npm i && npm start **
+
 ## Lưu ý
 * Back-end xây dựng dựa trên Design Partern Generic Repository kết hợp với Dependency Injection(sử dụng InversifyJs để build)
 
