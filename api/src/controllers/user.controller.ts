@@ -3,7 +3,7 @@ import { inject } from "inversify";
 import { controller, httpDelete, httpGet, httpPost, httpPut, request, response } from "inversify-express-utils";
 import RequestCustom from "request";
 import { HTTP_CODE, MESSAGE } from "../constants";
-import { REPOSITORY_TYPES } from "../ioc-config/types";
+import { MIDDLEWARE_TYPES, REPOSITORY_TYPES } from "../ioc-config/types";
 import { IUserRepository } from "../repositories";
 import { generateHash } from "../utils";
 import ApiResponse from "../utils/apiResponse";
@@ -25,7 +25,7 @@ export class UserController {
     }
 
 
-    @httpGet("/getOne/:id", REPOSITORY_TYPES.AuthenticatedMiddleware, REPOSITORY_TYPES.RequiredMiddleware)
+    @httpGet("/getOne/:id", MIDDLEWARE_TYPES.AuthenticatedMiddleware, MIDDLEWARE_TYPES.RequiredMiddleware)
     private async getOne(@request() req: RequestCustom, @response() res: Response) {
         try {
             const {params} = req;
