@@ -1,7 +1,6 @@
-# Boilerplate cho NodeJs Express và Angular(>=2)
-Project sử dụng NodeJs cho Back-end, Angular v11 cho FE, Database sử dụng MySQL
-## Các công nghệ sử dụng trong project:
-* NodeJs Express viết bằng Typescript
+# Boilerplate NodeJs Express and Angular(>=2:NodeJs, Angular, MySQL
+## Technologies:
+* NodeJs Express Typescript
 * TypeORM
 * Angular Version 11
 * TailwindCSS
@@ -9,30 +8,29 @@ Project sử dụng NodeJs cho Back-end, Angular v11 cho FE, Database sử dụn
 * InversifyJs
 * ...
 
-## Cài đặt:
-- Cài đặt MYSQL
-- Tạo cơ sở dữ liệu và bảng users trong **sql**
-- Mở **api** > **ormconfig.js** sửa cấu hình Mysql
-- Chạy Api: <b>cd /api && npm i && npm start</b>
-- Chạy client: <b>cd /client && npm i && npm start </b>
+## Set up:
+- Install MYSQL
+- Create database, folder **sql**
+- Open **api** > **ormconfig.js** edit configuration Mysql
+- Run NodeJs: <b>cd /api && npm i && npm start</b>
+- Run Angular: <b>cd /client && npm i && npm start </b>
 
-## Lưu ý
-* Back-end xây dựng dựa trên Design Partern Generic Repository kết hợp với Dependency Injection(sử dụng InversifyJs để build)
+## Notes
+* Back-end based on Design Partern Generic Repository and Dependency Injection(use InversifyJs)
 
-## Link tham khảo:
+## References:
 * Setup tailwindcss: https://trungk18.com/experience/configure-tailwind-css-with-angular/
-* Xây dựng DI cho Express: 
+* Setup DI: 
   +  https://dev.to/remojansen/implementing-the-onion-architecture-in-nodejs-with-typescript-and-inversifyjs-10ad
   + https://github.com/ZafiroJS/zafiro/tree/master/src
-* Xây dựng khung back-end bằng TypeScript: https://github.com/microsoft/TypeScript-Node-Starter
-* Setup tailwindCss bằng CLI: https://github.com/ngneat/tailwind
+* NodeJs TypeScript: https://github.com/microsoft/TypeScript-Node-Starter
+* Setup tailwindCss by CLI: https://github.com/ngneat/tailwind
 * ...
 
-## Xin cảm ơn:
-Project được xây dựng từ việc tham khảo code cũng như tự phát triển của bản thân mình, 
-xin cảm ơn Trịnh Khang, Anh Chau Tran, Anh Trung Vo, Anh Nam... cũng như các tác giả khác để giúp mh xây dựng project này
+## Many thanks:
+Many thanks for Trịnh Khang, Anh Chau Tran, Anh Trung Vo, Anh Nam...
 
-Mình sẽ tiếp tục phát triển project này thêm nữa, mọi người có ý kiến thắc mắc, giải đáp về project có thể liên hệ mình qua
+Contact me:
 * (SKYPE): Phamtiennam2301@gmail.com
 * (Mail): Phamtiennam2301@gmail.com
 * (FB): fb.com/phamtiennam23
