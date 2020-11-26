@@ -1,4 +1,4 @@
-# Boilerplate NodeJs Express and Angular(>=2:NodeJs, Angular, MySQL
+# Boilerplate NodeJs Express, Angular, TypeORM, MySql
 ## Technologies:
 * NodeJs Express Typescript
 * TypeORM
